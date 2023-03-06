@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tejar_Bestseller>
+            <version>0.1.0</version>    <!-- Version number of your module -->
+        </Tejar_Bestseller>
+    </modules>
+	<global>
+		<helpers>
+			<bestseller>
+				<class>Tejar_Bestseller_Helper</class>
+			</bestseller>
+		</helpers>
+		
+	</global>
+    <frontend>
+        <routers>
+          
+			 <bestseller>
+                <use>standard</use>
+                <args>
+                    <module>Tejar_Bestseller</module>
+                    <frontName>best-seller</frontName>
+                </args>
+            </bestseller>
+			
+        </routers>
+		<layout>
+			<updates>
+            <bestseller>
+                <file>best_seller.xml</file>
+            </bestseller>
+        </updates>
+		</layout>
+    </frontend>
+</config>
+
+

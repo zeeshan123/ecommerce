@@ -1,0 +1,66 @@
+<?xml version="1.0" ?> 
+  <config>
+    <modules>
+      <Tejar_Catalog>
+        <version>0.0.1</version> 
+      </Tejar_Catalog>
+    </modules>
+	<global>
+		<helpers>
+			<catalog>
+				<rewrite>
+					<data>Tejar_Catalog_Helper_Data</data>
+				</rewrite>
+				<rewrite>
+					<product>Tejar_Catalog_Helper_Product</product>
+				</rewrite>
+			</catalog>
+		</helpers>
+		<blocks>
+			<catalog>
+				<rewrite>
+					<product_view_type_configurable>Tejar_Catalog_Block_Product_View_Type_Configurable</product_view_type_configurable>
+				</rewrite>
+			</catalog>
+			<productalert>
+				<rewrite>
+					<product_view>Tejar_Catalog_Block_Product_View</product_view>
+				</rewrite>
+			</productalert>
+		</blocks>
+		<models>
+			<catalog>
+				<rewrite>
+					<url>Tejar_Catalog_Model_Url</url>
+				</rewrite>
+			</catalog>
+			
+		</models>
+    </global>
+	
+	
+	 <frontend>
+        <events>
+            <controller_action_predispatch_catalog_product_view>
+                <observers>
+                    <catalog>
+                        <type>model</type>
+                        <class>Tejar_Catalog_Model_Observer</class>
+                        <method>forwardToConfigurable</method>
+                    </catalog>
+                </observers>
+            </controller_action_predispatch_catalog_product_view>
+        </events>
+		
+        <routers>
+			 <tejar_catalog>
+                <use>standard</use>
+                <args>
+                    <module>Tejar_Catalog</module>
+                    <frontName>tejar_catalog</frontName>
+                </args>
+            </tejar_catalog>
+        </routers>
+	
+    </frontend>
+  </config>

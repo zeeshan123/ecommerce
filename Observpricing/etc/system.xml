@@ -1,0 +1,58 @@
+<config>
+	<tabs>
+		<tejarobservpricing translate="label" module="tejarobservpricing">
+			<label>Custom Cost</label>
+			<sort_order>200</sort_order>
+			<class>tejarobservpricing</class>
+		</tejarobservpricing>
+	</tabs>
+	<sections>
+		<tejarobservpricing translate="label" module="tejarobservpricing">
+		<label>Custom Cost </label>
+		<tab>tejarobservpricing</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>200</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>
+			<groups>
+				<store_custom_cost translate="label">
+					<label>Custom Cost &amp; Custom Shipping Cost</label>
+					<comment>Set Custom Cost and Custom Shipping Cost.</comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>100</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<custom_cost translate="label">
+							<label>Custom Cost</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</custom_cost>
+						<custom_shipping_cost translate="label">
+							<label>Custom Shipping Cost</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</custom_shipping_cost>
+						
+						<custom_handling_cost translate="label">
+							<label>Custom Handling Cost</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</custom_handling_cost>
+					</fields>
+				</store_custom_cost>
+			</groups>
+		</tejarobservpricing>
+	</sections>
+</config>

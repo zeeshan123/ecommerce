@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tejar_FeaturedProducts>
+            <version>0.1.0</version>    <!-- Version number of your module -->
+        </Tejar_FeaturedProducts>
+    </modules>
+	<global>
+		<helpers>
+			<featuredproducts>
+				<class>Tejar_FeaturedProducts_Helper</class>
+			</featuredproducts>
+		</helpers>
+		
+	</global>
+    <frontend>
+        <routers>
+			 <featuredproducts>
+                <use>standard</use>
+                <args>
+                    <module>Tejar_FeaturedProducts</module>
+                    <frontName>featured</frontName>
+                </args>
+            </featuredproducts>
+			
+        </routers>
+		<layout>
+			<updates>
+            <featured>
+                <file>featured.xml</file>
+            </featured>
+        </updates>
+		</layout>
+    </frontend>
+	
+</config>
+
+

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tejar_CustomFilters>
+            <version>1.0.0</version>
+        </Tejar_CustomFilters>
+    </modules>
+    <global>
+        <models>
+            <tejar_customfilters>
+                <class>Tejar_CustomFilters_Model</class>
+            </tejar_customfilters>
+        </models>
+        <blocks>
+            <tejar_customfilters>
+                <class>Tejar_CustomFilters_Block</class>
+            </tejar_customfilters>
+        </blocks>
+        <helpers>
+            <tejar_customfilters>
+                <class>Tejar_CustomFilters_Helper</class>
+            </tejar_customfilters>
+        </helpers>
+        <events>
+            <controller_front_init_routers> <!-- create a custom router to handle the 'new-products' url -->
+                <observers>
+                    <tejar_customfilters>
+                        <class>Tejar_CustomFilters_Controller_Router</class>
+                        <method>initControllerRouters</method>
+                    </tejar_customfilters>
+                </observers>
+            </controller_front_init_routers>
+        </events>
+    </global>
+    <frontend>
+        <routers> <!-- declare a router -->
+			<newproducts>
+                <use>standard</use>
+                <args>
+					<module>Tejar_CustomFilters</module>
+                    <frontName>newproducts</frontName>
+                </args>
+            </newproducts>
+            <newarrival>
+                <use>standard</use>
+                <args>
+					<modules>
+						<Tejar_CustomFilters before="Tejar_Newarrival">Tejar_CustomFilters</Tejar_CustomFilters>	
+					</modules>
+                    
+                </args>
+            </newarrival>
+			<mostviewed>
+                <use>standard</use>
+                <args>
+					<modules>
+						<Tejar_CustomFilters before="Tejar_Mostviewed">Tejar_CustomFilters</Tejar_CustomFilters>	
+					</modules>
+                </args>
+            </mostviewed>
+			<bestseller>
+                <use>standard</use>
+                <args>
+					<modules>
+						<Tejar_CustomFilters before="Tejar_Bestseller">Tejar_CustomFilters</Tejar_CustomFilters>	
+					</modules>
+                </args>
+            </bestseller>
+			<salesdeal>
+                <use>standard</use>
+                <args>
+					<modules>
+						<Tejar_CustomFilters before="Tejar_Salesdeal">Tejar_CustomFilters</Tejar_CustomFilters>	
+					</modules>
+                </args>
+            </salesdeal>
+			<featuredproducts>
+                <use>standard</use> 
+                <args>
+					<modules>
+						<Tejar_CustomFilters before="Tejar_FeaturedProducts">Tejar_CustomFilters</Tejar_CustomFilters>	
+					</modules>
+                </args>
+            </featuredproducts>
+        </routers>
+        <layout>
+            <updates>
+                <tejar_customfilters>
+                    <file>tejar_customfilters.xml</file>
+                </tejar_customfilters>
+            </updates>
+        </layout>
+    </frontend>
+</config>

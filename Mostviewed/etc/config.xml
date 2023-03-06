@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tejar_Mostviewed>
+            <version>0.1.0</version>    <!-- Version number of your module -->
+        </Tejar_Mostviewed>
+    </modules>
+	<global>
+    <helpers>
+        <mostviewed>
+            <class>Tejar_Mostviewed_Helper</class>
+        </mostviewed>
+    </helpers>
+</global>
+    <frontend>
+        <routers>
+			<mostviewed>
+                <use>standard</use>
+                <args>
+                    <module>Tejar_Mostviewed</module>
+                    <frontName>most-viewed</frontName>
+                </args>
+            </mostviewed>
+        </routers>
+		<layout>
+			<updates>
+            <mostviewed>
+                <file>most_viewed.xml</file>
+            </mostviewed>
+        </updates>
+		</layout>
+    </frontend>
+</config>
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config> 
+	<modules>
+        <Tejar_Sales>
+            <version>0.0.1</version>
+        </Tejar_Sales>
+    </modules>
+	<frontend>
+		<routers>
+			<sales>
+				<args>
+					<modules>
+						<Tejar_Sales before="Mage_Sales">Tejar_Sales</Tejar_Sales>
+					</modules>
+				</args>
+			</sales>
+		</routers>
+    </frontend>
+    <global>
+		<models>
+			<tejar_sales>
+				<class>Tejar_Sales_Model</class>
+			</tejar_sales>
+			<sales>
+				<rewrite>
+					<order>Tejar_Sales_Model_Order</order>
+				</rewrite>
+			</sales>
+			<sales>
+				<rewrite>
+					<order_pdf_invoice>Tejar_Sales_Model_Order_Pdf_Invoice</order_pdf_invoice>
+				</rewrite>
+			</sales>
+		</models>
+    </global>
+	
+</config>

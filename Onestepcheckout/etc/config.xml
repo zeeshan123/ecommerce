@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tejar_Onestepcheckout>
+            <version>0.1.0</version>
+        </Tejar_Onestepcheckout>
+    </modules>
+	<global>
+		<helpers>
+			<onestepcheckout>
+				<rewrite>
+					<data>Tejar_Onestepcheckout_Helper_Data</data> 
+					
+				</rewrite>
+				<rewrite>
+					
+					<message>Tejar_Onestepcheckout_Helper_Message</message> 
+				</rewrite>
+			</onestepcheckout>
+		</helpers>
+	</global>
+	<frontend>
+		<routers>
+			<onestepcheckout>
+				<args>
+					<modules>
+						<Tejar_Onestepcheckout before="Mage_Checkout">Tejar_Onestepcheckout</Tejar_Onestepcheckout>
+					</modules>
+				</args>
+			</onestepcheckout>
+        </routers>
+	</frontend>
+	<global>
+		<rewrite>
+			<fancy_url>
+			   <from><![CDATA[#^/buy/checkout[\/]?$#]]></from>
+				 <to><![CDATA[/onestepcheckout/index/$1]]></to>
+				<complete>1</complete>
+			</fancy_url>
+		</rewrite> 
+	</global>
+</config>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tejar_Newarrival>
+            <version>0.1.0</version>    <!-- Version number of your module -->
+        </Tejar_Newarrival>
+    </modules>
+	<global>
+		<helpers>
+			<newarrival>
+				<class>Tejar_Newarrival_Helper</class>
+			</newarrival>
+		</helpers>
+		
+	</global>
+    <frontend>
+        <routers>
+			 <newarrival>
+                <use>standard</use>
+                <args>
+                    <module>Tejar_Newarrival</module>
+                    <frontName>new-arrival</frontName>
+                </args>
+            </newarrival>
+			
+        </routers>
+		<layout>
+			<updates>
+				<newarrival>
+					<file>new_arrival.xml</file>
+				</newarrival>
+			</updates>
+		</layout>
+    </frontend>
+	
+</config>
+
+

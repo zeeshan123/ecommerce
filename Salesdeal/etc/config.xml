@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tejar_Salesdeal>
+            <version>0.1.0</version>    <!-- Version number of your module -->
+        </Tejar_Salesdeal>
+    </modules>
+	<global>
+		<helpers>
+			<salesdeal>
+				<class>Tejar_Salesdeal_Helper</class>
+			</salesdeal>
+		</helpers>
+		<blocks>
+			<salesdeal>
+				<class>Tejar_Salesdeal_Block_Product_Special</class>
+			</salesdeal>
+		</blocks>
+	</global>
+    <frontend>
+        <routers>
+			 <salesdeal>
+                <use>standard</use>
+                <args>
+                    <module>Tejar_Salesdeal</module>
+                    <frontName>deals</frontName>
+                </args>
+            </salesdeal>
+			
+        </routers>
+		<layout>
+			<updates>
+            <salesdeal>
+                <file>sales_deal.xml</file>
+            </salesdeal>
+        </updates>
+		</layout>
+    </frontend>
+</config>
